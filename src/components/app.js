@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CommentBox from './commentBox';
 import CommentList from './commentList';
-import Header from './header';
+import Header from './header'
 
 export default class App extends Component {
   render() {
@@ -10,6 +10,7 @@ export default class App extends Component {
         <Header />
         <CommentBox />
         <CommentList />
+        {this.props.children}
       </div>
     );
   }

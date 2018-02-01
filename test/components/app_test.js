@@ -15,4 +15,8 @@ describe('App', () => {
   it('CommentList на месте', () => {
     expect(component.find('.comment-list')).to.exist;
   });
+
+  it('Header на месте', () => {
+    expect(component.find('.header')).to.exist;
+  });
 });
