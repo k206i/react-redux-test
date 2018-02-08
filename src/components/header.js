@@ -6,10 +6,11 @@ import * as actions from '../actions';
 class Header extends Component {
 
   authButton() {
-    if (this.props.authenticated) {
+
+    if (this.props.authentificated) {
       return (
         <button
-          onClick={() => this.props.authenticate(false)}
+          onClick={() => this.props.authentificate(false)}
         >
           Sing Out
         </button>
@@ -17,7 +18,7 @@ class Header extends Component {
     }
     return (
       <button
-        onClick={() => this.props.authenticate(true)}
+        onClick={() => this.props.authentificate(true)}
       >
         Sing In
       </button>
@@ -49,7 +50,7 @@ class Header extends Component {
 
 function mapStateToProps(state) {
   return {
-    authenticated: state.authenticated,
+    authentificated: state.authentificated,
   }
 }
 
