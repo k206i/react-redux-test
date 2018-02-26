@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   SAVE_COMMENT,
   CHANGE_AUTH,
@@ -19,12 +20,10 @@ export function authentificate(isLoggedIn) {
 }
 
 export function fetchUsers() {
+  const request = axios.get('https://jsonplaceholder.typicode.com/users');
+
   return {
     type: FETCH_USERS,
-    payload: [
-      { name: 'Колян' },
-      { name: 'Паша' },
-      { name: 'Даша' },
-    ]
+    payload: request,
   };
 }

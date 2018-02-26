@@ -12,8 +12,9 @@ import requireAuth from './components/require_authentification';
 import App from './components/app';
 import Resources from './components/resources';
 import reducers from './reducers';
+import Async from './middlewares/async';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
